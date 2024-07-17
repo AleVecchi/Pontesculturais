@@ -1,0 +1,347 @@
+/* Reset básico de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contêiner centralizado */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px 0;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #6a0dad;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+.header-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header-content h1 {
+    font-family: 'Akita', serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.header-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.header-content .btn:hover {
+    background-color: #5a0099;
+    transform: translateY(-5px);
+}
+
+/* Seção de sobre */
+.about {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-size: 2.5em;
+    color: #6a0dad;
+    margin-bottom: 20px;
+}
+
+.img-personalizada {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Grupo de botões */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-group .btn {
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-group .btn-download {
+    background: linear-gradient(135deg, #ff6a00, #ff4500);
+    color: white;
+}
+
+.button-group .btn-download:hover {
+    background: linear-gradient(135deg, #ff4500, #ff1c00);
+    transform: translateY(-5px);
+}
+
+.button-group .btn-secondary {
+    background: linear-gradient(135deg, #8a2be2, #6a0dad);
+    color: white;
+}
+
+.button-group .btn-secondary:hover {
+    background: linear-gradient(135deg, #6a0dad, #5a0099);
+    transform: translateY(-5px);
+}
+
+.button-group .btn-primary {
+    background-color: #6a0dad;
+    color: white;
+}
+
+.button-group .btn-primary:hover {
+    background-color: #5a0099;
+    transform: translateY(-5px);
+}
+
+/* Seção de chamada para ação */
+.call-to-action {
+    background: linear-gradient(135deg, #6a0dad, #8a2be2);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.form-advanced {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input[type="submit"] {
+    background-color: #ffdd57;
+    color: #6a0dad;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #e6c944;
+    transform: translateY(-5px);
+}
+
+/* Seção de destaques */
+.highlights {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.highlights h2 {
+    font-size: 2.5em;
+    color: #6a0dad;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.highlight h3 {
+    font-size: 2em;
+    color: #6a0dad;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 1.2em;
+}
+
+/* Seção de detalhes */
+.details {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: left;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.details h2 {
+    font-size: 2.5em;
+    color: #6a0dad;
+    margin-bottom: 20px;
+}
+
+.details ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+.details ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões de acessibilidade */
+.accessibility-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.accessibility-btn {
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.accessibility-btn:hover {
+    background-color: #5a0099;
+    transform: translateY(-5px);
+}

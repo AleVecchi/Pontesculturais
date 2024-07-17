@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Pontes Culturais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="imagem/Oficial (1).png" alt="Logo Pontes Culturais">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#highlights">Destaques</a></li>
+                    <li><a href="#call-to-action">Cadastre-se</a></li>
+                    <li><a href="details.html">Detalhes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content">
+            <h1>Projeto Pontes Culturais</h1>
+            <p>Celebrando a Diversidade pela Arte em Ribeirão Preto</p>
+            <a href="#about" class="btn btn-primary">Saiba Mais</a>
+        </div>
+    </header>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre o Projeto</h2>
+            <img src="imagem/pontes.png" alt="Imagem do Projeto Pontes Culturais" class="img-personalizada">
+            <p>O projeto Pontes Culturais tem como objetivo promover a inclusão social e celebrar a diversidade cultural através de uma série de eventos artísticos e educacionais em Ribeirão Preto. Através de oficinas, apresentações e workshops, buscamos engajar a comunidade local e proporcionar uma plataforma para artistas e educadores compartilharem seu conhecimento e talento.</p>
+            <p>Nosso objetivo é criar um espaço onde todas as vozes possam ser ouvidas e todas as culturas possam ser celebradas. Com eventos que vão desde exposições de arte até apresentações de música e dança, o projeto visa transformar a cidade em um vibrante centro cultural.</p>
+            <div class="button-group">
+                <a href="details.html" class="btn btn-secondary">Detalhes do Projeto</a>
+                <a href="imagem/projetocultural.pdf" download class="btn btn-download">Baixar PDF</a>
+            </div>
+        </div>
+    </section>
+    <section id="call-to-action" class="call-to-action">
+        <div class="container">
+            <h2>Junte-se a Nós!</h2>
+            <p>Quer fazer parte desta incrível jornada cultural? Cadastre-se agora para receber atualizações sobre eventos, oficinas e muito mais!</p>
+            <form id="formGoogle" method="POST" onsubmit="submitToGoogleForms(event)" class="form-advanced">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Cadastre-se" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="highlights" class="highlights">
+        <div class="container">
+            <h2>Destaques do Projeto</h2>
+            <div class="highlight">
+                <img src="imagem/oficinas.png" alt="Oficina" class="img-personalizada">
+                <h3>Oficinas</h3>
+                <p>Participe de oficinas de arte e cultura com especialistas em diversas áreas. Aprenda e desenvolva novas habilidades em um ambiente colaborativo.</p>
+            </div>
+            <div class="highlight">
+                <img src="imagem/teatro.png" alt="Apresentação" class="img-personalizada">
+                <h3>Apresentações</h3>
+                <p>Assista a apresentações incríveis de música, dança e teatro, celebrando a diversidade e o talento local.</p>
+            </div>
+            <div class="highlight">
+                <img src="imagem/evento.png" alt="Eventos Comunitários" class="img-personalizada">
+                <h3>Eventos Comunitários</h3>
+                <p>Junte-se a nós em eventos comunitários que promovem a inclusão e a celebração da diversidade cultural em Ribeirão Preto.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>Siga-nos no Instagram</p>
+            <a href="https://www.instagram.com/geracaoinclusivabr/" target="_blank">
+                <img src="imagem/instagram.png" alt="Instagram" class="social-icon">
+            </a>
+            <p>&copy; 2024 Projeto Pontes Culturais. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <div class="whatsapp-button">
+        <a href="https://wa.me/5516997878800" target="_blank">
+            <img src="imagem/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+    <div class="accessibility-buttons">
+        <button class="accessibility-btn">Acessibilidade Auditiva</button>
+        <button class="accessibility-btn">Acessibilidade Visual</button>
+    </div>
+    <script>
+        function submitToGoogleForms(event) {
+            event.preventDefault();
+            const form = document.getElementById('formGoogle');
+            const data = new FormData(form);
+
+            const name = data.get('name');
+            const email = data.get('email');
+
+            const googleFormsURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfuhx4DsNcRCTDJEMBFeVGpUJ87VNUDQbQ0SuqBX3ioAgwkCw/formResponse';
+
+            fetch(googleFormsURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: new URLSearchParams({
+                    'entry.2005620554': name, // ID do campo "Nome"
+                    'entry.1045781291': email // ID do campo "E-mail"
+                })
+            }).then(() => {
+                alert('Formulário enviado com sucesso!');
+                form.reset();
+            }).catch(err => {
+                alert('Ocorreu um erro ao enviar o formulário');
+                console.error(err);
+            });
+        }
+    </script>
+</body>
+</html>
