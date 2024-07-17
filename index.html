@@ -6,6 +6,15 @@
     <title>Projeto Pontes Culturais</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+        (function(d){
+            var s = d.createElement("script");
+            s.setAttribute("src", "https://cdn.equalweb.com/core/4.1.2/accessibility.js");
+            s.setAttribute("charset", "UTF-8");
+            s.setAttribute("defer", "");
+            d.head.appendChild(s);
+        })(document);
+    </script>
 </head>
 <body>
     <header>
@@ -94,8 +103,8 @@
         </a>
     </div>
     <div class="accessibility-buttons">
-        <button class="accessibility-btn">Acessibilidade Auditiva</button>
-        <button class="accessibility-btn">Acessibilidade Visual</button>
+        <button class="accessibility-btn" onclick="openAccessibilityMenu()">Acessibilidade Auditiva</button>
+        <button class="accessibility-btn" onclick="openAccessibilityMenu()">Acessibilidade Visual</button>
     </div>
     <script>
         function submitToGoogleForms(event) {
@@ -122,6 +131,11 @@
                 alert('Ocorreu um erro ao enviar o formulário');
                 console.error(err);
             });
+        }
+
+        function openAccessibilityMenu() {
+            // Código para abrir o menu de acessibilidade da EqualWeb
+            // Isso abrirá o menu de acessibilidade da EqualWeb para o usuário ajustar as configurações conforme necessário
         }
     </script>
 </body>
